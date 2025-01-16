@@ -10,7 +10,7 @@
 
 #define M_G 9.806
 
-class MySimpleDoublePendulum : public MyFunctor {
+class MySimpleDoublePendulum final : public MyFunctor {
 	/*
 	 * Simple double pendulum with lengths of 1, masses of 1 and gravitational
 	 * acceleration equal to M_G to keep the numer of operations low.
