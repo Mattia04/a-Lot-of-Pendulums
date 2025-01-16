@@ -1,5 +1,4 @@
 #include <iostream>
-
 #include <CL/opencl.h>
 
 int main() {
