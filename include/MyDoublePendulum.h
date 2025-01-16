@@ -1,0 +1,27 @@
+//
+// Created by Mattia Ballico on 15/01/25.
+//
+
+#ifndef MYDOUBLEPENDULUM_H
+#define MYDOUBLEPENDULUM_H
+
+#include "MyDoublePendulum.h"
+#include "MyFunctor.h"
+
+#define M_G 9.806
+
+class MySimpleDoublePendulum : public MyFunctor {
+	/*
+	 * Simple double pendulum with lengths of 1, masses of 1 and gravitational
+	 * acceleration equal to M_G to keep the numer of operations low.
+	 */
+	public:
+		MySimpleDoublePendulum() = default;
+		~MySimpleDoublePendulum() override = default;
+
+		[[nodiscard]] std::vector<float> eval(const std::vector<float> &x) const override;
+};
+
+
+
+#endif //MYDOUBLEPENDULUM_H
