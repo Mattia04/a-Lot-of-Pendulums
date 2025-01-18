@@ -5,17 +5,16 @@
 #ifndef ODEINTEGRATOR_H
 #define ODEINTEGRATOR_H
 
-#include <armadillo>
-#include <functional>
+#include "MyFunctor.h"
 
 class MyODEIntegrator {
 public:
 	MyODEIntegrator() = default;
   	virtual ~MyODEIntegrator() = default;
 
-    virtual std::vector<float> step(const float &h,
-                    const std::vector<float> &x,
-                    std::function<std::vector<float>(std::vector<float>)> &f)
+    virtual arma::Col<float>  step(const float &h,
+                    const arma::Col<float> &x,
+                    MyFunctor &f)
 		const = 0;
 };
 
