@@ -19,7 +19,7 @@ class MySimpleDoublePendulum final : public MyFunctor {
 		MySimpleDoublePendulum() = default;
 		~MySimpleDoublePendulum() override = default;
 
-		[[nodiscard]] std::vector<float> eval(const std::vector<float> &x) const override;
+		[[nodiscard]] arma::Col<float> eval(const arma::Col<float>  &x) const override;
 };
 
 
