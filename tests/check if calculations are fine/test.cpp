@@ -1,3 +1,11 @@
+//
+// Created by Mattia Ballico on 17/01/25.
+//
+// To use: replace this code in the main.cpp file and compile as usual.
+// Then it will create a file: outputFile.txt which contains the angles
+// and angluar velocities for an example, here is already given an example.
+//
+
 #include <iostream>
 #include <fstream>
 #include <CL/opencl.h>
