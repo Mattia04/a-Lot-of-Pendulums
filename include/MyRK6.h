@@ -16,7 +16,7 @@ public:
 	MyRK6() = default;
 	~MyRK6() override = default;
 
-	void step(const float& t, const float& h, arma::Col<float>& x, MyFunctor& f) const override;
+	void step(const double& t, const double& h, arma::Col<double>& x, MyFunctor& f) const override;
 };
 
 #endif //MYRK6_H

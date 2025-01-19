@@ -15,14 +15,14 @@ public:
 	MyRK4() = default;
 	~MyRK4() override = default;
 
-	void step(const float &t, const float &h,
-							arma::Col<float> &x,
+	void step(const double &t, const double &h,
+							arma::Col<double> &x,
 							MyFunctor &f) const override
 	{
-		const arma::Col k1 = f(x);
-		const arma::Col k2 = f(x + h / 2 * k1);
-		const arma::Col k3 = f(x + h / 2 * k2);
-		const arma::Col k4 = f(x + h * k3);
+		const arma::Col<double> k1 = f(x);
+		const arma::Col<double> k2 = f(x + h / 2 * k1);
+		const arma::Col<double> k3 = f(x + h / 2 * k2);
+		const arma::Col<double> k4 = f(x + h * k3);
 
 		x += h/6*(k1 + 2*k2 + 2*k3 + k4);
 	};

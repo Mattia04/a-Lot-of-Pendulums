@@ -7,12 +7,12 @@
 namespace
 {
 	// Coefficients for the Butcher tableau for RK7
-	constexpr float m_A[8] = {
+	constexpr double m_A[8] = {
 		1./6, 1./3, 1./2, 2./11, 2./3, 6./7, 0, 1.
 	}; // m_A is here just for future implementations with time dependence
 
-	constexpr float b8 = 77./1440;
-	constexpr float m_B[8][8] = {
+	constexpr double b8 = 77./1440;
+	constexpr double m_B[8][8] = {
 		{1./6},
 		{0, 1./3},
 		{1./8, 0, 3./8},
@@ -23,12 +23,12 @@ namespace
 		{-71. / 32 - b8 * 270./11, 0, -195./22, 32./7, 29403./3584, -729./512, 1029./1408, b8 * 270./11}
 	};
 
-	constexpr float m_C[9] = {
+	constexpr double m_C[9] = {
 		77./1440 - b8, 0, 0, 32./105, 1771561./6289920, 243./2560, 16807./74880, b8, 11./270};
 }
 
-void MyRK7::step(const float& t, const float& h, arma::Col<float>& x, MyFunctor& f) const {
-	arma::Col<float> k[9];
+void MyRK7::step(const double& t, const double& h, arma::Col<double>& x, MyFunctor& f) const {
+	arma::Col<double> k[9];
 
 	k[0] = h * f(x);
 	for (int i = 1; i < 9; i++) {

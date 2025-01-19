@@ -11,9 +11,9 @@ class MyFunctor {
 public:
 	virtual ~MyFunctor() = default;
 
-	[[nodiscard]] virtual arma::Col<float> eval(const arma::Col<float>  &x) const = 0;
+	[[nodiscard]] virtual arma::Col<double> eval(const arma::Col<double>  &x) const = 0;
 
-	arma::Col<float>  operator()(const arma::Col<float>  &x) const {return eval(x);}
+	arma::Col<double> operator()(const arma::Col<double>  &x) const {return eval(x);}
 };
 
 
