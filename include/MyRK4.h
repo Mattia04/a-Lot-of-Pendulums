@@ -2,6 +2,7 @@
 // Created by Mattia Ballico on 15/01/25.
 //
 // Code for the classic Runge-Kutta integrator
+// Global error: O(h^4)
 //
 
 #ifndef MYRK4_H
