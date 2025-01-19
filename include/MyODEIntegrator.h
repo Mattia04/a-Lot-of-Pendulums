@@ -12,8 +12,9 @@ public:
 	MyODEIntegrator() = default;
   	virtual ~MyODEIntegrator() = default;
 
-    virtual arma::Col<float>  step(const float &h,
-                    const arma::Col<float> &x,
+    virtual void step(const float &t,
+    				const float &h,
+                    arma::Col<float> &x,
                     MyFunctor &f)
 		const = 0;
 };

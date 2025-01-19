@@ -1,6 +1,8 @@
 //
 // Created by Mattia Ballico on 15/01/25.
 //
+// Code for the classic Runge-Kutta integrator
+//
 
 #ifndef MYRK4_H
 #define MYRK4_H
@@ -12,8 +14,8 @@ public:
 	MyRK4() = default;
 	~MyRK4() override = default;
 
-	arma::Col<float> step(const float &h,
-							const arma::Col<float> &x,
+	void step(const float &t, const float &h,
+							arma::Col<float> &x,
 							MyFunctor &f) const override
 	{
 		const arma::Col k1 = f(x);
@@ -21,7 +23,7 @@ public:
 		const arma::Col k3 = f(x + h / 2 * k2);
 		const arma::Col k4 = f(x + h * k3);
 
-		return x + h/6*(k1 + 2*k2 + 2*k3 + k4);
+		x += h/6*(k1 + 2*k2 + 2*k3 + k4);
 	};
 };
 
