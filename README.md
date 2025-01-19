@@ -35,13 +35,15 @@ Here is a list of what classes I have defined:
 - RK4
 - RK5
 - RK6
-- RK7 
-- RK8
+- RK7 (wrong)
+- RK8 (wrong)
 - RKF45 (todo)
 - RKDP45 (todo)
 
-NOTE: the Butcher tables for all of them (except for RK4) are generated using 
-ChatGPT so they could be wrong, but from eye I don't see an error.
+NOTE: The RK7 and RK8 have a wrong butcher tableau, I will fix them when i 
+find a way to generate the coefficients automatically. The RKF45 and RKDP45 
+are not yet implemented because they use a non-fixed time step but for this 
+particular code is easier to use a fixed time step.
 
 The child classes of `MyODEIntegrator` calculates the next step of the 
 integration using the `.step()` method, which takes the current time `t`, 
