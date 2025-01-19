@@ -8,10 +8,10 @@ void MyRK5::step(const float& t, const float& h, arma::Col<float>& x, MyFunctor&
 	arma::Col<float> k[6];
 
 	k[0] = h * f(x);
-    for (int i = 1; i < 5; i++) {
+    for (int i = 1; i < 6; i++) {
         auto temp = x;
     	for (int j = 0; j < i; j++) {
-        	temp += m_B[i][j] * k[j];
+        	temp += m_B[i-1][j] * k[j];
     	}
         k[i] = h * f(temp);
     }
