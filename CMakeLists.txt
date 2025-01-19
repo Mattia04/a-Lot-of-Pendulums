@@ -13,5 +13,7 @@ file(GLOB_RECURSE HEADER_FILES ./include/*.h)
 file(GLOB_RECURSE SOURCE_FILES ./source/*.cpp)
 
 add_executable(PendulumSimulator main.cpp ${HEADER_FILES} ${SOURCE_FILES})
+add_executable(Comparison tests/compare_integrators/compare_integrators.cpp
+        ${HEADER_FILES} ${SOURCE_FILES})
 
 target_link_libraries(PendulumSimulator ${OpenCL_LIB})
