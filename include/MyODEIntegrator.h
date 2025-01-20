@@ -19,6 +19,4 @@ public:
 		const = 0;
 };
 
-
-
 #endif //ODEINTEGRATOR_H
