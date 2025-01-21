@@ -9,16 +9,11 @@
 #include <string>
 #include <iostream>
 #include <fstream>
-#include <CL/opencl.h>
 
 #include "MyDoublePendulum.h"
-#include "MyRK4.h"
-#include "MyRK5.h"
-#include "MyRK6.h"
-#include "MyRK7.h"
-#include "MyRK8.h"
+#include "MyRKN.h"
 
-#define FPS 240
+#define FPS 120
 
 using namespace std;
 
