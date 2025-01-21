@@ -5,8 +5,14 @@ Boia deh ci piacciono i pendoli.
 ## TODOs
 
 - Add documentation to the classes
+- Add Symplectic integrator
 - Make the visualization (in c++)
 - Complete this file
+
+### Other things I don't know 
+
+Maybe it's better to think a different file structure for the local 
+libraries, now it's kind of a complicated structure.
 
 ## Project overview
 
@@ -26,30 +32,50 @@ Boia deh ci piacciono i pendoli.
 
 ### `MyFunctor`
 
+A simple abstract class to be used as a base for general ODE problems.
+
+Note: there is no time dependence, but it could be added if necessary.
+
+#### `MySimpleDoublePendulum`
+
+A child class of `MyFunctor`, it implements Hamilton equations of the double 
+pendulum with rod length of 1 and masses of 1. For the maths behind it see 
+`Mathematica.pdf`.
+
 ### `MyODEIntegrator`
 
-I have made different ODE integrators to test their performance.
+An abstract class for ODE integrators with **fixed** step size. 
 
-Here is a list of what classes I have defined:
+#### `MyRKN`
 
-- RK4
-- RK5
-- RK6
-- RK7 (wrong)
-- RK8 (wrong)
-- RKF45 (todo)
-- RKDP45 (todo)
+An abstract class for Runge-Kutta integrators of order $n$.
 
-NOTE: The RK7 and RK8 have a wrong butcher tableau, I will fix them when i 
-find a way to generate the coefficients automatically. The RKF45 and RKDP45 
-are not yet implemented because they use a non-fixed time step but for this 
-particular code is easier to use a fixed time step.
+With this I can create Runge-Kutta integrators by just giving the number of 
+steps `N`, and the butcher tableau in the form of 3 arrays: `m_A[N]`, `m_B[N][N]`, 
+`m_C[N+1]` which contains the coefficients of the butcher tableau.
 
-The child classes of `MyODEIntegrator` calculates the next step of the 
-integration using the `.step()` method, which takes the current time `t`, 
-the step size `h`, the current generalized coordinates `x` and the functor 
-to integrate `f` (in this case the `MyDoublePendulum` class).
+List of classes defined:
 
-### `MySimpleDoublePendulum`
+- `RK4`
+- `RK5`
+- `RK6`
+- `RK7` (NOT TESTED)
 
-### `MyDoublePendulum`
+### `MyDODEIntegrator`
+
+An abstract class for ODE integrators with **variable** step size. 
+
+#### `MyDRKN`
+
+An abstract class for Runge-Kutta integrators of order $n$.
+
+With this I can create Runge-Kutta integrators by just giving the number of 
+steps `N`, and the butcher tableau in the form of 4 arrays: `m_A[N]`, 
+`m_B[N][N]`, `m_CH[N+1]`, `m_CT[N+1]` which contains the coefficients of the 
+butcher tableau, CH is used for the next step, CT is used for the error 
+estimation.
+
+List of classes defined:
+
+- `RKF45` (NOT TESTED): Runge-Kutta-Fehlberg method
+- `RKDP45` (NOT TESTED): Runge-Kutta-Dormand-Prince method
