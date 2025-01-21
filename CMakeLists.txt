@@ -9,8 +9,8 @@ include_directories(./include)
 
 find_library(OpenCL_LIB OpenCL)
 
-file(GLOB_RECURSE HEADER_FILES ./include/*.h)
-file(GLOB_RECURSE SOURCE_FILES ./source/*.cpp)
+file(GLOB_RECURSE HEADER_FILES ./include/*)
+file(GLOB_RECURSE SOURCE_FILES ./source/*)
 
 add_executable(PendulumSimulator main.cpp ${HEADER_FILES} ${SOURCE_FILES})
 add_executable(Comparison tests/compare_integrators/compare_integrators.cpp
