@@ -11,7 +11,7 @@
 #include <fstream>
 
 #include "MyDoublePendulum.h"
-#include "MyRKN.h"
+#include "ODE_Integrators/MyRKN.h"
 
 #define FPS 120
 

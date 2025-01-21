@@ -2,7 +2,7 @@
 // Created by Mattia Ballico on 20/01/25.
 //
 
-#include "MyRKN.h"
+#include "ODE_Integrators/MyRKN.h"
 
 // ============ RK methods as derived classes ============
 namespace m_RK4

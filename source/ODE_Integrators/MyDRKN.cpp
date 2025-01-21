@@ -2,7 +2,7 @@
 // Created by Mattia Ballico on 21/01/25.
 //
 
-#include "../include/MyDRKN.h"
+#include "ODE_Integrators/MyDRKN.h"
 
 // ============ DRK methods as derived classes ============
 namespace m_RKF45
