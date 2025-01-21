@@ -14,7 +14,7 @@
 
 class MyDODEIntegrator {
 public:
-	explicit MyDODEIntegrator(const double h, const double t_max, const double tolerance)
+	explicit MyDODEIntegrator(const double &h, const double &t_max, const double &tolerance)
 		: m_h(h), m_t_tot(t_max), m_tol(tolerance) {};
 	virtual ~MyDODEIntegrator() = default;
 
