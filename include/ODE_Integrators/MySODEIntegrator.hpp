@@ -13,7 +13,7 @@
 
 class MySODEIntegrator {
 public:
-	explicit MySODEIntegrator(const double &h): m_h(h) {};
+	MySODEIntegrator() = default;
 	virtual ~MySODEIntegrator() = default;
 
 	virtual void step(const double &t,
@@ -22,17 +22,13 @@ public:
 		arma::Col<double> &v,
 		MyFunctor &f)
 	= 0;
-
-protected:
-	double m_h;
-	double m_t = 0;
 };
 
 // Verlet's method
 class MyVer final : public MySODEIntegrator
 {
 public:
-	explicit MyVer(const double &h): MySODEIntegrator(h) {};
+	MyVer() = default;
 	~MyVer() override = default;
 
 	void step(const double &t, const double& h, arma::Col<double> &x, arma::Col<double> &v, MyFunctor &f) override
