@@ -28,6 +28,9 @@ public:
 		m_h *= std::max(0.5, std::min(2., 0.95 * std::pow(m_tol / m_err,0.2)));
 	};
 
+	[[nodiscard]] double GetTime()  const { return m_t; };
+	[[nodiscard]] double GetError() const { return m_err; };
+
 protected:
 	double m_h;
 	double m_t = 0;
