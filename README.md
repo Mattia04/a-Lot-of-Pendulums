@@ -5,7 +5,7 @@ Boia deh ci piacciono i pendoli.
 ## TODOs
 
 - Add documentation to the classes
-- Add Symplectic integrator
+- Add butcher tableau generator
 - Make the visualization (in c++)
 - Complete this file
 
@@ -79,3 +79,17 @@ List of classes defined:
 
 - `RKF45` (NOT TESTED): Runge-Kutta-Fehlberg method
 - `RKDP45` (NOT TESTED): Runge-Kutta-Dormand-Prince method
+
+### `MySODEIntegrator`
+
+An abstract class for **symplectic** ODE integrators.
+
+List of classes defined:
+
+- `MyVer` (NOT TESTED): Verlet method
+
+Even tho symplectic methods are more stable for physical systems I don't 
+think I will update this class since I have described the physical system 
+in a different way of how those methods work, so the implementations would 
+not be elegant (and I won't change everything just to implement them, I 
+think I have enough methods of integration for this project).
