@@ -10,7 +10,7 @@
 #ifndef MYDODEINTEGRATOR_H
 #define MYDODEINTEGRATOR_H
 
-#include "MyFunctor.h"
+#include "MyFunctor.hpp"
 
 class MyDODEIntegrator {
 public:

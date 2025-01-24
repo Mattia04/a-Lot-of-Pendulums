@@ -2,7 +2,7 @@
 #include <fstream>
 #include <CL/opencl.h>
 
-#include "MyDoublePendulum.h"
+#include "MyDoublePendulum.hpp"
 #include "MyRK8.h"
 
 #define FPS 60

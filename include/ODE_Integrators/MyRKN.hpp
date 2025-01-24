@@ -8,7 +8,7 @@
 #ifndef MYRKN_H
 #define MYRKN_H
 
-#include "MyODEIntegrator.h"
+#include "MyODEIntegrator.hpp"
 
 template <unsigned int N> // number of steps of the method
 class MyRKN : public MyODEIntegrator {

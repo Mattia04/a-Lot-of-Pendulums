@@ -8,7 +8,7 @@
 #ifndef ODEINTEGRATOR_H
 #define ODEINTEGRATOR_H
 
-#include "MyFunctor.h"
+#include "MyFunctor.hpp"
 
 class MyODEIntegrator {
 public:

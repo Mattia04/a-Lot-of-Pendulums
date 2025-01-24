@@ -8,7 +8,7 @@
 #ifndef MYDRKN_H
 #define MYDRKN_H
 
-#include "MyDODEIntegrator.h"
+#include "MyDODEIntegrator.hpp"
 
 template <unsigned int N> // number of steps of the method
 class MyDRKN : public MyDODEIntegrator {

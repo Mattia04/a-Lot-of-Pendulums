@@ -5,8 +5,8 @@
 #ifndef MYDOUBLEPENDULUM_H
 #define MYDOUBLEPENDULUM_H
 
-#include "MyDoublePendulum.h"
-#include "MyFunctor.h"
+#include "MyDoublePendulum.hpp"
+#include "MyFunctor.hpp"
 
 #define M_G 9.806
 

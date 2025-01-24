@@ -2,7 +2,7 @@
 // Created by Mattia Ballico on 15/01/25.
 //
 
-#include "MyDoublePendulum.h"
+#include "MyDoublePendulum.hpp"
 
 arma::Col<double>  MySimpleDoublePendulum::eval(const arma::Col<double> &x) const
 {

@@ -9,7 +9,7 @@
 #ifndef MYSODEINTEGRATOR_H
 #define MYSODEINTEGRATOR_H
 
-#include "MyFunctor.h"
+#include "MyFunctor.hpp"
 
 class MySODEIntegrator {
 public:
