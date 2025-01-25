@@ -2,17 +2,17 @@
 
 Boia deh ci piacciono i pendoli.
 
+I have decided to move the comparison of integrators in another project 
+see: [ODE Solvers](https://github.com/Mattia04/ODESolvers), for this 
+project I will use only KR4 and/or RK5, the other methods will remain but 
+will not be used.
+
 ## TODOs
 
 - Add documentation to the classes
 - Add butcher tableau generator
 - Make the visualization (in c++)
 - Complete this file
-
-### Other things I don't know 
-
-Maybe it's better to think a different file structure for the local 
-libraries, now it's kind of a complicated structure.
 
 ## Project overview
 
