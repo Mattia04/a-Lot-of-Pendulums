@@ -1,6 +1,8 @@
 # A lot of Pendulums
 
-Boia deh ci piacciono i pendoli.
+> "Boia deh ci piacciono i pendoli."
+> 
+> -- <cite>M.B.</cite>
 
 I have decided to move the comparison of integrators in another project 
 see: [ODE Solvers](https://github.com/Mattia04/ODESolvers), for this 
@@ -10,23 +12,36 @@ will not be used.
 ## TODOs
 
 - Add documentation to the classes
-- Add butcher tableau generator
+- Add GPU computations.
 - Make the visualization (in c++)
 - Complete this file
 
 ## Project overview
 
-### video example
+Here is a preview of the double pendulum fractal:
 
-### photo fractal
+The first image (512x512px) produced:
 
-### Project tree structure
+<img src="tests/static_fractal/output_image.png">
+
+Then I changed the color scheme and produced this 128x128px image in 20 
+seconds:
+
+<img src="tests/static_fractal/output_image3.png">
+
+Then I left the code running for 1.5 hours and got this 2024x2024px image:
+
+<img src="tests/static_fractal/output_image2.png">
+
+The results show an accurate method of producing the pendulum fractal but 
+without the GPU is not feasible to do anything significantly better. 
+So this project will remain still until I understand how to use GPUs.
 
 ## Mathematical Description
 
-### Hamiltonian system
-
-### Wolfram Mathematica Calculations
+I used the hamiltonian equation of the double pendulum using the lengths 
+and masses equal to 1. For more information about the mathematics behind 
+this project please refer to: [this pdf](Mathematica.pdf).
 
 ## Classes defined
 
