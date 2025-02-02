@@ -9,12 +9,9 @@ see: [ODE Solvers](https://github.com/Mattia04/ODESolvers), for this
 project I will use only KR4 and/or RK5, the other methods will remain but 
 will not be used.
 
-## TODOs
+# Note:
 
-- Add documentation to the classes
-- Add GPU computations.
-- Make the visualization (in c++)
-- Complete this file
+This project is now obsolete, the new project can be found on [this repo](https://github.com/Mattia04/ALotOfPendulums2)
 
 ## Project overview
 
